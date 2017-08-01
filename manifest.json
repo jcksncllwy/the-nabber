@@ -1,0 +1,21 @@
+{
+  "manifest_version": 2,
+  "name": "Image Scraper",
+  "description": "This extension does it's best to save or repost an image from arbitrary sites, circumventing click-blockers.",
+  "version": "0.2",
+  "background": {
+    "scripts": ["background.js", "jquery-3.2.1.slim.min.js"]
+  },
+  "content_scripts": [{
+    "matches":["http://*/*","https://*/*"],
+    "js":["content.js", "jquery-3.2.1.slim.min.js"],
+    "css": ["content.css"]
+  }],
+  "browser_action": {
+    "default_title": "Test Extension"
+  },
+  "permissions": [
+    "contextMenus",
+    "<all_urls>"
+  ]
+}

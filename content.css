@@ -1,0 +1,81 @@
+.image-selector-modal-container{
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100vw;
+	height: 100vh;
+	background-color: rgba(0,0,0,0.2);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.image-selector-modal{
+	width: 80vw;
+	height: 80vh;
+	background: rgb(255,255,255);
+	border-radius: 10px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.image-container{
+	padding: 20px;
+	border-radius: 20px;
+	width: 80%;
+	height: 80%;
+	background: rgba(0,0,0,0.2);
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+}
+
+.image-container .image{
+	width: 80%;
+	height: 80%;
+	background-size: contain;
+	background-position: center;
+	background-repeat: no-repeat;
+}
+
+.controls{
+	height: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.button{
+	background-color: #fff;
+	border-radius: 5px;
+	padding: 5px;
+	cursor: pointer;
+}
+
+.image-selector-modal .close-button{
+	position: absolute;
+	top: 0;
+	right: 0;
+	margin-top: 10px;
+	margin-right: 10px;
+	width: 20px;
+	height: 20px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background: rgba(0,0,0,0.2);
+	border-radius: 20px;
+	color: #fff;
+	cursor: pointer;
+}
+
+
+
+
+
+
+
+
+
+
