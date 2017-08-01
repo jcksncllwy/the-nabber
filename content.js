@@ -12,7 +12,7 @@ document.addEventListener("mousedown", function(event){
 
 chrome.runtime.onMessage.addListener(function(request, sender, sendResponse) {
     if(request == "doTheThing") {
-      openImgSelector([getInstagramSrc(), getDirectSrc()])
+      openImgSelector([getInstagramSrc(), getDirectSrc(), 'https://scontent-atl3-1.cdninstagram.com/t51.2885-15/e35/20582414_1955195391425396_4054093053160325120_n.jpg'])
       sendResponse(true)
     }
 });
@@ -27,14 +27,14 @@ getInstagramSrc = function(){
 
 openImgSelector = function(imgSrcs){
   modalContainer = $('<div class="image-selector-modal-container"></div>').appendTo('body')
-  let modal = $('<div class="image-selector-modal"></div>').appendTo(modalContainer)  
+  let modal = $('<div class="image-selector-modal"></div>').appendTo(modalContainer)
+  let imagesContainer = $('<div class="images-container"></div>').appendTo(modal)
   $(imgSrcs).each(function(i,src){
     if(src){
-      let container = $('<div class="image-container"></div>').appendTo(modal)
+      let container = $('<div class="image-container"></div>').appendTo(imagesContainer)
       let image = $('<div class="image" style="background-image:url('+src+')"></div>').appendTo(container)
       let controls = $('<div class="controls"></div>').appendTo(container)
-      
-      let saveButton = $('<a href="'+src+'" download="'+src+'"><div class="button save" >Save</div></a>').appendTo(controls)
+      let saveButton = $('<a class="button save" href="'+src+'" download="'+src+'">Save</a>').appendTo(controls)
     }    
   })
 

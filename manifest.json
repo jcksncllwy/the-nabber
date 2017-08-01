@@ -1,6 +1,6 @@
 {
   "manifest_version": 2,
-  "name": "Image Scraper",
+  "name": "The Nabber",
   "description": "This extension does it's best to save or repost an image from arbitrary sites, circumventing click-blockers.",
   "version": "0.2",
   "background": {
